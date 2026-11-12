@@ -1,11 +1,271 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Programming</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.8;
+}
+
+header {
+  background: #111827;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #172554, #0f172a);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #94a3b8;
+}
+
+.tag {
+  color: #38bdf8;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 65px 25px;
+}
+
+h2 {
+  font-size: 28px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  color: #38bdf8;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-placeholder {
+  background: #334155;
+  border: 1px dashed #64748b;
+  border-radius: 8px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 15px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  background: #1e3a5f;
+  border: 1px solid #2563eb;
+  padding: 8px 18px;
+  border-radius: 20px;
+  color: #bfdbfe;
+}
+
+a {
+  color: #38bdf8;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111827;
+  color: #64748b;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <h1>My Portfolio</h1>
-  <p>Programming Portfolio 2026</p>
+
+<header>
+  <div class="logo">MY PORTFOLIO</div>
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#python">Python</a>
+    <a href="#festival">Festival</a>
+    <a href="#skills">Skills</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <p class="tag">PROGRAMMING PORTFOLIO / 2026</p>
+  <h1>Hello, I'm a<br>Programming Student.</h1>
+  <p>Learning programming through classes and personal projects.</p>
+</section>
+
+<section class="container" id="profile">
+  <h2>Profile</h2>
+  <div class="card">
+    <h3>About Me</h3>
+    <p>
+      高等専門学校で情報技術やプログラミングについて学んでいます。
+      授業で学んだ知識を活用しながら、
+      Pythonや電子工作などの制作活動に取り組んでいます。
+    </p>
+    <p>所属：〇〇高等専門学校 〇年</p>
+    <p>興味：プログラミング・コンピュータ・ものづくり</p>
+  </div>
+</section>
+
+<section class="container" id="python">
+  <h2>Python Project</h2>
+  <div class="card">
+    <h3>Study Record App</h3>
+    <p>
+      Google ColabとPythonを使用して制作した学習記録アプリです。
+      学習した教科や時間、内容などを記録し、
+      CSVファイルに保存することを目的としています。
+    </p>
+    <p>
+      使用技術：Python / Google Colab / CSV / Google Drive
+    </p>
+    <p>
+      <a href="#" target="_blank">Google Colab Project Link（後で設定）</a>
+    </p>
+
+    <h3>Project Screenshots</h3>
+    <div class="images">
+      <div class="image-placeholder">画像1：入力画面</div>
+      <div class="image-placeholder">画像2：記録画面</div>
+      <div class="image-placeholder">画像3：CSV保存</div>
+      <div class="image-placeholder">画像4：実行結果</div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="festival">
+  <h2>KOSEN Festival Project</h2>
+  <div class="card">
+    <h3>Project Overview</h3>
+    <p>
+      高専祭の展示に向けて、チームで制作活動に取り組みました。
+      ここにプロジェクトの目的や制作したもの、
+      自分が担当した作業について記載します。
+    </p>
+    <p>担当：〇〇（後で記入）</p>
+    <p>使用技術：〇〇（後で記入）</p>
+
+    <h3>Project Screenshots</h3>
+    <div class="images">
+      <div class="image-placeholder">画像1：制作物</div>
+      <div class="image-placeholder">画像2：作業風景</div>
+      <div class="image-placeholder">画像3：動作画面</div>
+      <div class="image-placeholder">画像4：展示風景</div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="skills">
+  <h2>Skills & Experience</h2>
+  <div class="card">
+    <h3>Programming Languages</h3>
+    <div class="skills">
+      <span class="skill">Python</span>
+      <span class="skill">Arduino</span>
+      <span class="skill">Scratch</span>
+      <span class="skill">HTML / CSS</span>
+    </div>
+
+    <h3>Development Tools</h3>
+    <div class="skills">
+      <span class="skill">Git / GitHub</span>
+      <span class="skill">VSCode</span>
+      <span class="skill">Google Colab</span>
+      <span class="skill">Arduino IDE</span>
+      <span class="skill">Tinkercad</span>
+    </div>
+    <p>
+      授業や制作活動を通じて、各種プログラミング言語や
+      開発環境の基本的な操作を学んでいます。
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>My Portfolio © 2026</p>
+</footer>
+
 </body>
 </html>
